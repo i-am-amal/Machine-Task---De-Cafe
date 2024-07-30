@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             Row(
                               children: [
-                                Icon(Icons.language, size: 30),
+                                Icon(Icons.g_translate, size: 30),
                                 SizedBox(width: 10),
                                 Icon(Icons.account_circle_outlined, size: 30),
                                 SizedBox(width: 10),

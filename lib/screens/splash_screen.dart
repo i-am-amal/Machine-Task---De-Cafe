@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:machine_test_ui_screens/screens/bottom_nav_widget.dart';
+import 'package:machine_test_ui_screens/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const BottomNavBarWidget()),
+        MaterialPageRoute(builder: (context) => const LoginScreen()),
       );
     });
   }

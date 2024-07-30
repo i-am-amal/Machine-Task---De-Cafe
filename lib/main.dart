@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:machine_test_ui_screens/screens/login_screen.dart';
+import 'package:machine_test_ui_screens/screens/bottom_nav_widget.dart';
+import 'package:machine_test_ui_screens/screens/order_screen.dart';
+import 'package:machine_test_ui_screens/screens/splash_screen.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginScreen(),
+      home: const BottomNavBarWidget(),
     );
   }
 }
