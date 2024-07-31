@@ -47,7 +47,7 @@ class StartOrder extends StatelessWidget {
                             ),
                             const SizedBox(height: 8),
                             const Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor',
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do ',
                               style: TextStyle(fontSize: 13),
                             ),
                             const SizedBox(height: 4),

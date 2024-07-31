@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:machine_test_ui_screens/screens/product_detail_screen.dart';
+import 'package:machine_test_ui_screens/screens/item_detail_screen.dart';
 import 'package:machine_test_ui_screens/widgets/item_row.dart';
 import 'package:machine_test_ui_screens/widgets/selected_button.dart';
 
@@ -83,10 +83,10 @@ class _OrderScreenState extends State<OrderScreen> {
               const SizedBox(height: 10),
               InkWell(
                 onTap: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const ProductDetailScreen()),
+                        builder: (context) => const ItemDetailScreen()),
                   );
                 },
                 child: const ItemRow(
@@ -106,19 +106,34 @@ class _OrderScreenState extends State<OrderScreen> {
               const SizedBox(height: 12),
               const ItemRow(
                   imagePath: 'assets/images/food1.png',
-                  title: 'Snack Title 1',
+                  title: 'Cinnamon bun',
                   description: 'Lorem Ipsum is simply dummy text'),
               const SizedBox(height: 14),
               const ItemRow(
                   imagePath: 'assets/images/food.png',
-                  title: 'Snack Title 2',
+                  title: 'Croissant',
                   description: 'Lorem Ipsum is simply dummy text'),
               const SizedBox(height: 14),
               const ItemRow(
                   imagePath: 'assets/images/fd.png',
-                  title: 'Snack Title 3',
+                  title: 'Bacon, Sausage & Egg Wrap',
                   description: 'Lorem Ipsum is simply dummy text'),
-              const SizedBox(height: 25),
+              const SizedBox(height: 14),
+              const ItemRow(
+                  imagePath: 'assets/images/food1.png',
+                  title: 'Cinnamon bun',
+                  description: 'Lorem Ipsum is simply dummy text'),
+              const SizedBox(height: 14),
+              const ItemRow(
+                  imagePath: 'assets/images/food.png',
+                  title: 'Croissant',
+                  description: 'Lorem Ipsum is simply dummy text'),
+              const SizedBox(height: 14),
+              const ItemRow(
+                  imagePath: 'assets/images/fd.png',
+                  title: 'Bacon, Sausage & Egg Wrap',
+                  description: 'Lorem Ipsum is simply dummy text'),
+              const SizedBox(height: 50),
             ],
           ),
         ),

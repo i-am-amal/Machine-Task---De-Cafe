@@ -28,9 +28,7 @@ class SelectableButton extends StatelessWidget {
       child: TextButton(
         onPressed: onPressed,
         style: TextButton.styleFrom(
-          foregroundColor:
-              isSelected ? Colors.orange : Colors.grey, // Text color
-          // backgroundColor: isSelected ? Colors.transparent : Colors.grey[300], // Background color
+          foregroundColor: isSelected ? Colors.orange : Colors.grey,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),

@@ -33,7 +33,14 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
       body: Stack(
         children: [
           Center(
-            child: options.elementAt(_selectedIndex),
+            child: Navigator(
+              key: GlobalKey<NavigatorState>(),
+              onGenerateRoute: (RouteSettings settings) {
+                return MaterialPageRoute(
+                  builder: (_) => options[_selectedIndex],
+                );
+              },
+            ),
           ),
           if (_selectedIndex == 1)
             Positioned(
@@ -57,11 +64,9 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
                             filled: true,
                             fillColor: Colors.white,
                             hintText: 'Find store',
-                            suffixIcon: Icon(Icons.qr_code),
-                            contentPadding: EdgeInsets.symmetric(
-                                vertical:
-                                    8), // Adjust the padding to reduce the height
-
+                            suffixIcon: const Icon(Icons.qr_code),
+                            contentPadding:
+                                const EdgeInsets.symmetric(vertical: 8),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(4),
                               borderSide: BorderSide.none,
@@ -70,8 +75,9 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 16),
-                    Icon(Icons.shopping_bag_outlined, color: Colors.white),
+                    const SizedBox(width: 16),
+                    const Icon(Icons.shopping_bag_outlined,
+                        color: Colors.white),
                   ],
                 ),
               ),
@@ -102,34 +108,6 @@ class _BottomNavBarWidgetState extends State<BottomNavBarWidget> {
         selectedItemColor: Colors.orange,
         onTap: _onItemTapped,
       ),
-
-      // Center(
-      //   child: options.elementAt(_selectedIndex),
-      // ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   type: BottomNavigationBarType.fixed,
-      //   items: const [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'Home',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.shopping_bag_outlined),
-      //       label: 'Order',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.local_offer_outlined),
-      //       label: 'Offers',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.call_outlined),
-      //       label: 'Call waiter',
-      //     ),
-      //   ],
-      //   currentIndex: _selectedIndex,
-      //   selectedItemColor: Colors.orange,
-      //   onTap: _onItemTapped,
-      // ),
     );
   }
 }
